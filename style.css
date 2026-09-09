@@ -1,3 +1,14 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 .timer {
 	background-color: #726e6e;
 	margin: 20px;
@@ -14,12 +25,23 @@
 }
 
 .summary {
-	display: grid;
-	gap: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .stats {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 10px;
+}
+
+@media (max-width: 600px) {
+	.timer {
+		flex-direction: column;
+	}
+
+	.stats {
+		grid-template-columns: repeat(1, 1fr);
+	}
 }
